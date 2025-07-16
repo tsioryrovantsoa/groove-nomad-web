@@ -15,7 +15,7 @@ Route::middleware('guest')->group(function () {
     Route::post('/login', [AuthController::class, 'dologin'])->name('auth.login');
 
     Route::get('/register', [AuthController::class, 'register'])->name('auth.register');
-    Route::post('/register', [AuthController::class, 'doregister'])->name('auth.register');
+    Route::post('/register', [AuthController::class, 'doregister'])->name('auth.do.register');
 });
 
 Route::middleware('auth')->group(function () {

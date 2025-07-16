@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="col-lg-8 offset-lg-2">
-        <form method="POST" action="{{ route('auth.register') }}">
+        <form method="POST" action="{{ route('auth.do.register') }}">
             @csrf
 
             <div class="form-row">

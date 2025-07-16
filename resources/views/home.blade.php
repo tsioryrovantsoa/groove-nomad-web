@@ -3,7 +3,7 @@
 <body>
     @include('include.navigation')
 
-    <section class="hero spad set-bg" data-setbg="{{ asset('img/hero-bg.png') }}">
+    <section class="hero spad set-bg" data-setbg="{{ asset('assets/img/hero-bg.png') }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -39,7 +39,7 @@
                 <div class="event__slider owl-carousel">
                     <div class="col-lg-4">
                         <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="{{ asset('img/events/event-1.jpg') }}">
+                            <div class="event__item__pic set-bg" data-setbg="{{ asset('assets/img/events/event-1.jpg') }}">
                                 <div class="tag-date">
                                     <span>Dec 15, 2019</span>
                                 </div>
@@ -55,7 +55,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="{{ asset('img/events/event-1.jpg') }}">
+                            <div class="event__item__pic set-bg" data-setbg="{{ asset('assets/img/events/event-1.jpg') }}">
                                 <div class="tag-date">
                                     <span>Dec 15, 2019</span>
                                 </div>
@@ -71,7 +71,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="{{ asset('img/events/event-1.jpg') }}">
+                            <div class="event__item__pic set-bg" data-setbg="{{ asset('assets/img/events/event-1.jpg') }}">
                                 <div class="tag-date">
                                     <span>Dec 15, 2019</span>
                                 </div>
@@ -87,7 +87,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="{{ asset('img/events/event-1.jpg') }}">
+                            <div class="event__item__pic set-bg" data-setbg="{{ asset('assets/img/events/event-1.jpg') }}">
                                 <div class="tag-date">
                                     <span>Dec 15, 2019</span>
                                 </div>
@@ -110,7 +110,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="about__pic">
-                        <img src="{{ asset('img/about/about.png') }}" alt="" />
+                        <img src="{{ asset('assets/img/about/about.png') }}" alt="" />
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -135,7 +135,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 p-0">
-                    <div class="services__left set-bg" data-setbg="{{ asset('img/services/service-left.jpg') }}">
+                    <div class="services__left set-bg" data-setbg="{{ asset('assets/img/services/service-left.jpg') }}">
                         <a href="#" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                     </div>
                 </div>
@@ -143,7 +143,7 @@
                     <div class="row services__list">
                         <div class="col-lg-6 p-0 order-lg-1 col-md-6 order-md-1">
                             <div class="service__item deep-bg">
-                                <img src="{{ asset('img/services/service-1.png') }}" alt="" />
+                                <img src="{{ asset('assets/img/services/service-1.png') }}" alt="" />
                                 <h4>Wedding</h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -153,7 +153,7 @@
                         </div>
                         <div class="col-lg-6 p-0 order-lg-2 col-md-6 order-md-2">
                             <div class="service__item">
-                                <img src="{{ asset('img/services/service-1.png') }}" alt="" />
+                                <img src="{{ asset('assets/img/services/service-1.png') }}" alt="" />
                                 <h4>Clubs and bar</h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -163,7 +163,7 @@
                         </div>
                         <div class="col-lg-6 p-0 order-lg-4 col-md-6 order-md-4">
                             <div class="service__item deep-bg">
-                                <img src="{{ asset('img/services/service-1.png') }}" alt="" />
+                                <img src="{{ asset('assets/img/services/service-1.png') }}" alt="" />
                                 <h4>DJ lessons</h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -173,7 +173,7 @@
                         </div>
                         <div class="col-lg-6 p-0 order-lg-3 col-md-6 order-md-3">
                             <div class="service__item">
-                                <img src="{{ asset('img/services/service-1.png') }}" alt="" />
+                                <img src="{{ asset('assets/img/services/service-1.png') }}" alt="" />
                                 <h4>Corporate events</h4>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -448,7 +448,7 @@
                 </div>
                 <div class="col-lg-5 p-0">
                     <div class="track__pic">
-                        <img src="{{ asset('img/track-right.jpg') }}" alt="" />
+                        <img src="{{ asset('assets/img/track-right.jpg') }}" alt="" />
                     </div>
                 </div>
             </div>
@@ -467,7 +467,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="youtube__item">
-                        <div class="youtube__item__pic set-bg" data-setbg="{{ asset('img/youtube/youtube-1.jpg') }}">
+                        <div class="youtube__item__pic set-bg" data-setbg="{{ asset('assets/img/youtube/youtube-1.jpg') }}">
                             <a href="#" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                         </div>
                         <div class="youtube__item__text">
@@ -477,7 +477,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="youtube__item">
-                        <div class="youtube__item__pic set-bg" data-setbg="{{ asset('img/youtube/youtube-1.jpg') }}">
+                        <div class="youtube__item__pic set-bg" data-setbg="{{ asset('assets/img/youtube/youtube-1.jpg') }}">
                             <a href="#" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                         </div>
                         <div class="youtube__item__text">
@@ -487,7 +487,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="youtube__item">
-                        <div class="youtube__item__pic set-bg" data-setbg="{{ asset('img/youtube/youtube-1.jpg') }}">
+                        <div class="youtube__item__pic set-bg" data-setbg="{{ asset('assets/img/youtube/youtube-1.jpg') }}">
                             <a href="#" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                         </div>
                         <div class="youtube__item__text">
@@ -501,7 +501,7 @@
     <!-- Youtube Section End -->
 
     <!-- Countdown Section Begin -->
-    <section class="countdown spad set-bg" data-setbg="{{ asset('img/countdown-bg.jpg') }}">
+    <section class="countdown spad set-bg" data-setbg="{{ asset('assets/img/countdown-bg.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

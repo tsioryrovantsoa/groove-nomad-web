@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-BAmyaSJ1.css",
+    "file": "assets/app-Dn1InUom.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
@@ -51,6 +51,18 @@
   "resources/fonts/fontawesome-webfont.woff2": {
     "file": "assets/fontawesome-webfont-B-jkhYfk.woff2",
     "src": "resources/fonts/fontawesome-webfont.woff2"
+  },
+  "resources/img/pause.png": {
+    "file": "assets/pause-TzPZUt_F.png",
+    "src": "resources/img/pause.png"
+  },
+  "resources/img/play-default.png": {
+    "file": "assets/play-default-D1Rn_E-U.png",
+    "src": "resources/img/play-default.png"
+  },
+  "resources/img/play.png": {
+    "file": "assets/play-Bc25Dcge.png",
+    "src": "resources/img/play.png"
   },
   "resources/js/app.js": {
     "file": "assets/app-Q2GXiMx-.js",

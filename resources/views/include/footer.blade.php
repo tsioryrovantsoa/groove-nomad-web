@@ -1,5 +1,5 @@
 <footer class="footer {{ request()->routeIs('home') ? '' : 'footer--normal' }} spad set-bg"
-    data-setbg="{{ asset('img/footer-bg.png') }}">
+    data-setbg="{{ asset('assets/img/footer-bg.png') }}">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6">
@@ -51,7 +51,19 @@
     </div>
 </footer>
 
-@vite(['resources/js/app.js'])
+<script src="{{ asset('assets/js/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.nicescroll.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.barfiller.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.countdown.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.slicknav.js') }}"></script>
+<script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('assets/js/main.js') }}"></script>
+
+<!-- Music Plugin -->
+<script src="{{ asset('assets/js/jquery.jplayer.min.js') }}"></script>
+<script src="{{ asset('assets/js/jplayerInit.js') }}"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">

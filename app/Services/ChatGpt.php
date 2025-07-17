@@ -176,6 +176,19 @@ Propose un programme de sejour immersif et coherent de {$duration} jours qui int
 
 ---
 
+INCLUSIONS OBLIGATOIRES :
+
+1. **LINEUP DU FESTIVAL** : Propose une liste d'artistes credibles et populaires qui correspondent aux genres musicaux preferes du client. Inclus des artistes internationaux et locaux de la region.
+
+2. **CIRCUIT CULTUREL** : Propose un circuit culturel de {$duration} jours qui integre :
+   - Visites culturelles liees aux gouts du client
+   - Decouverte de la region et de ses traditions
+   - Activites complementaires au festival
+   - Restaurants typiques et experiences gastronomiques
+   - Points d'interet touristiques
+
+---
+
 REGLES STRICTES :
 
 1. LE BUDGET DE {$request->budget} EUR TTC NE DOIT JAMAIS ETRE DEPASSE

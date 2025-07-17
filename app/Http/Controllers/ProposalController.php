@@ -154,4 +154,42 @@ class ProposalController extends Controller
 
         return redirect()->route('request.index')->with('success', 'Proposition refusée ! Nouvelle proposition en cours de génération...');
     }
+
+    /**
+     * Télécharge la facture PDF d'une proposition (route publique)
+     *
+     * @param string $filename
+     * @return \Illuminate\Http\Response
+     */
+    public function downloadPublicInvoice(string $filename)
+    {
+        // Trouver la proposition par le nom de fichier
+        $proposal = Proposal::where('quotation_pdf', $filename)->first();
+        
+        if (!$proposal) {
+            abort(404, 'Facture non trouvée.');
+        }
+
+        // Vérifier que la proposition est acceptée
+        if ($proposal->status !== 'accepted') {
+            abort(404, 'Facture non disponible pour cette proposition.');
+        }
+
+        // Si la facture n'existe pas encore, la générer
+        if (!$proposal->hasInvoice()) {
+            $filename = $this->generateInvoice($proposal);
+            $proposal->update(['quotation_pdf' => $filename]);
+        }
+
+        // Retourner le fichier PDF
+        $filePath = storage_path('app/public/invoices/' . $proposal->quotation_pdf);
+        
+        if (!file_exists($filePath)) {
+            abort(404, 'Fichier PDF non trouvé.');
+        }
+
+        return response()->download($filePath, $filename, [
+            'Content-Type' => 'application/pdf',
+        ]);
+    }
 }

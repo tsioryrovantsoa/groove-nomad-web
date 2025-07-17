@@ -49,3 +49,8 @@ Route::middleware('auth')->group(function () {
 Route::get('/test-error', function () {
     throw new \Exception('Test d\'erreur Discord');
 });
+
+// Route publique pour télécharger les factures (sans authentification)
+Route::get('/invoice/{filename}', [ProposalController::class, 'downloadPublicInvoice'])
+    ->name('invoice.download.public')
+    ->where('filename', '.*');

@@ -33,4 +33,14 @@ class Proposal extends Model
     {
         return $this->hasMany(ProposalDetail::class);
     }
+
+    /**
+     * Vérifie si la facture PDF existe
+     *
+     * @return bool
+     */
+    public function hasInvoice(): bool
+    {
+        return $this->quotation_pdf && file_exists(storage_path('app/public/invoices/' . $this->quotation_pdf));
+    }
 }

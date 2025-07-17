@@ -33,4 +33,9 @@ class Request extends Model
     {
         return $this->hasMany(\App\Models\Proposal::class);
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

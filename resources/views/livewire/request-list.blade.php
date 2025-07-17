@@ -152,6 +152,11 @@
                                                         onclick="document.getElementById('refusal-{{ $proposal->id }}').classList.toggle('d-none')">
                                                         <i class="fa fa-times mr-1"></i>Refuser
                                                     </button>
+                                            @elseif ($proposal->status === 'accepted')
+                                                <div class="action-buttons mt-3 text-center">
+                                                    <a href="{{ route('proposals.invoice', $proposal) }}" class="btn btn-primary btn-lg">
+                                                        <i class="fa fa-download mr-1"></i>Télécharger la facture
+                                                    </a>
 
                                                     <div id="refusal-{{ $proposal->id }}" class="mt-3 d-none"
                                                         wire:ignore>

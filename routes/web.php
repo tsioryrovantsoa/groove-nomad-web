@@ -41,6 +41,9 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/proposals/{proposal}/payment/success', [ProposalController::class, 'handleStripeSuccess'])
         ->name('proposals.payment.success');
+    
+    Route::get('/proposals/{proposal}/invoice', [ProposalController::class, 'downloadInvoice'])
+        ->name('proposals.invoice');
 });
 
 Route::get('/test-error', function () {

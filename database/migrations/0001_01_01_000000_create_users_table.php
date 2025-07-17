@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
 
+            $table->string('airtable_record_id')->nullable();
+
             $table->string('last_name');              // nom
             $table->string('first_name');             // prénom
             $table->string('address');                // adresse

@@ -31,6 +31,7 @@ class User extends Authenticatable
         'password',
         'terms_accepted',
         'birth_date',
+        'airtable_record_id',
     ];
 
     /**
@@ -53,6 +54,8 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'birth_date' => 'date',
+            'terms_accepted' => 'boolean',
         ];
     }
 

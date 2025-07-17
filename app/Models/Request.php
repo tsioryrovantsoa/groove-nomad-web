@@ -17,7 +17,8 @@ class Request extends Model
         'cultural_tastes',
         'phobias',
         'allergies',
-        'status'
+        'status',
+        'airtable_id'
     ];
 
     protected $casts = [

@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('requests', function (Blueprint $table) {
             $table->id();
+
+            $table->string('airtable_id')->nullable();
+
             // Relations
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
 

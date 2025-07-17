@@ -79,7 +79,7 @@ class AuthController extends Controller
 
         Auth::login($user);
 
-        return redirect()->intended(route('home'))->with('success', 'Inscription réussie, bienvenue !');
+        return redirect()->route('request.index')->with('success', 'Inscription réussie, bienvenue !');
     }
 
     public function logout()

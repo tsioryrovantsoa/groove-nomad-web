@@ -1,13 +1,13 @@
 <div wire:poll.5s wire:ignore.self>
     <div class="col-lg-12">
-        @if($requests->count() > 0)
+        @if ($requests->count() > 0)
             <div class="text-center mb-4">
                 <a href="{{ route('chat.index') }}" class="btn btn-success btn-lg">
                     <i class="fa fa-rocket mr-2"></i>Démarrer un nouvelle trip
                 </a>
             </div>
         @endif
-        
+
         @forelse ($requests as $request)
             <div class="card shadow-sm mb-4 border-0">
                 <div class="card-header bg-gradient-primary text-white">

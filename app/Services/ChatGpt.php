@@ -320,19 +320,91 @@ IMPORTANT : Le prix total doit etre inferieur ou egal a {$request->budget} EUR. 
 
     /**
      * Trouve un festival correspondant à une demande
+     * Garantit toujours de retourner un festival dans la même région
      *
      * @param Request $request
      * @return Festival|null
      */
     public function findMatchingFestival(Request $request): ?Festival
     {
-        // OPTIMISATION : Ajouter des index et optimiser la requête
-        return Festival::select('id', 'name', 'start_date', 'end_date', 'location', 'region', 'description')
+        // 1. Chercher un festival dans les dates exactes demandées
+        $festival = Festival::select('id', 'name', 'start_date', 'end_date', 'location', 'region', 'description')
             ->where('region', $request->region)
             ->whereDate('start_date', '<=', $request->date_end)
             ->whereDate('end_date', '>=', $request->date_start)
             ->inRandomOrder()
             ->first();
+
+        if ($festival) {
+            return $festival;
+        }
+
+        // 2. Si pas trouvé, chercher le festival le plus proche dans la même région
+        $closestFestival = Festival::select('id', 'name', 'start_date', 'end_date', 'location', 'region', 'description')
+            ->where('region', $request->region)
+            ->get()
+            ->sortBy(function ($festival) use ($request) {
+                // Calculer la distance temporelle entre les dates du festival et les dates demandées
+                $festivalStart = $festival->start_date;
+                $festivalEnd = $festival->end_date;
+                $requestStart = $request->date_start;
+                $requestEnd = $request->date_end;
+
+                // Si le festival est avant les dates demandées
+                if ($festivalEnd < $requestStart) {
+                    return $requestStart->diffInDays($festivalEnd);
+                }
+                // Si le festival est après les dates demandées
+                if ($festivalStart > $requestEnd) {
+                    return $festivalStart->diffInDays($requestEnd);
+                }
+                // Si le festival chevauche les dates demandées
+                return 0;
+            })
+            ->first();
+
+        if ($closestFestival) {
+            Log::info('Festival le plus proche trouvé pour la demande', [
+                'request_id' => $request->id,
+                'festival_id' => $closestFestival->id,
+                'request_dates' => $request->date_start->format('d/m/Y') . ' - ' . $request->date_end->format('d/m/Y'),
+                'festival_dates' => $closestFestival->start_date->format('d/m/Y') . ' - ' . $closestFestival->end_date->format('d/m/Y')
+            ]);
+            return $closestFestival;
+        }
+
+        // 3. Si toujours pas trouvé, piocher un festival au hasard dans la même région
+        $randomFestival = Festival::select('id', 'name', 'start_date', 'end_date', 'location', 'region', 'description')
+            ->where('region', $request->region)
+            ->inRandomOrder()
+            ->first();
+
+        if ($randomFestival) {
+            Log::info('Festival aléatoire trouvé pour la demande', [
+                'request_id' => $request->id,
+                'festival_id' => $randomFestival->id,
+                'request_dates' => $request->date_start->format('d/m/Y') . ' - ' . $request->date_end->format('d/m/Y'),
+                'festival_dates' => $randomFestival->start_date->format('d/m/Y') . ' - ' . $randomFestival->end_date->format('d/m/Y')
+            ]);
+            return $randomFestival;
+        }
+
+        // 4. En dernier recours, piocher n'importe quel festival
+        $anyFestival = Festival::select('id', 'name', 'start_date', 'end_date', 'location', 'region', 'description')
+            ->inRandomOrder()
+            ->first();
+
+        if ($anyFestival) {
+            Log::warning('Aucun festival trouvé dans la région demandée, sélection d\'un festival aléatoire', [
+                'request_id' => $request->id,
+                'request_region' => $request->region,
+                'festival_id' => $anyFestival->id,
+                'festival_region' => $anyFestival->region
+            ]);
+            return $anyFestival;
+        }
+
+        return null;
     }
 
     /**

@@ -17,9 +17,6 @@
                                 <li class="{{ request()->routeIs(patterns: 'festival.*') ? 'active' : '' }}">
                                     <a href="{{ route('festival.index') }}">Festival</a>
                                 </li>
-                                <li class="{{ request()->routeIs('request.create') ? 'active' : '' }}">
-                                    <a href="{{ route('request.create') }}">Preferences</a>
-                                </li>
                                 @guest
                                     <li class="{{ request()->routeIs('auth.*') ? 'active' : '' }}">
                                         <a href="{{ route('auth.login') }}">Connexion</a>

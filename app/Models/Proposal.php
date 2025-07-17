@@ -16,7 +16,8 @@ class Proposal extends Model
         'quotation_pdf',
         'send_email_at',
         'email_read_at',
-        'rejection_reason'
+        'rejection_reason',
+        'airtable_id'
     ];
 
     public function request()

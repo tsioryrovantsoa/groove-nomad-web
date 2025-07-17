@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('proposals', function (Blueprint $table) {
             $table->id();
+            $table->string('airtable_id')->nullable();
             $table->foreignId('request_id')->constrained()->onDelete('cascade');
             $table->foreignId('festival_id')->nullable()->constrained()->onDelete('set null');
             $table->text('prompt_text');

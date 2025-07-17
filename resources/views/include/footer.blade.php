@@ -7,13 +7,13 @@
                     <ul>
                         <li>
                             <i class="fa fa-phone"></i>
-                            <p>Phone</p>
-                            <h6>1-677-124-44227</h6>
+                            <p>Téléphone</p>
+                            <h6>+33 1 23 45 67 89</h6>
                         </li>
                         <li>
                             <i class="fa fa-envelope"></i>
                             <p>Email</p>
-                            <h6>DJ.Music@gmail.com</h6>
+                            <h6>contact@groove-nomad.com</h6>
                         </li>
                     </ul>
                 </div>
@@ -25,15 +25,15 @@
                         <a href="#"><i class="fa fa-facebook"></i></a>
                         <a href="#"><i class="fa fa-twitter"></i></a>
                         <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 offset-lg-1 col-md-6">
                 <div class="footer__newslatter">
-                    <h4>Stay With me</h4>
+                    <h4>Restez informé</h4>
                     <form action="#">
-                        <input type="text" placeholder="Email" />
+                        <input type="text" placeholder="Votre email" />
                         <button type="submit"><i class="fa fa-send-o"></i></button>
                     </form>
                 </div>
@@ -45,7 +45,6 @@
                 <script>
                     document.write(new Date().getFullYear());
                 </script>
-                Tous droits réservés
             </p>
         </div>
     </div>

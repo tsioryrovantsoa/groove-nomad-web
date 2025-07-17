@@ -3,7 +3,7 @@
 <body>
     @include('include.navigation')
 
-    <section class="hero spad set-bg" data-setbg="{{ asset('assets/img/hero-bg.png') }}">
+    <section class="hero spad set-bg" data-setbg="{{ asset('assets/img/hero-bg.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -15,14 +15,11 @@
                             <br /> grâce à l’IA et à l’automatisation, tout en s’adaptant aux besoins de chaque membre
                             du groupe.
                         </p>
-                        <a href="{{ route('request.create') }}" class="primary-btn border-btn" style="color:white;">Créer mon expérience
+                        <a href="{{ route('request.index') }}" class="primary-btn">Créer mon expérience
                             personnalisée</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="linear__icon">
-            <i class="fa fa-angle-double-down"></i>
         </div>
     </section>
 
@@ -31,7 +28,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Upcoming Events</h2>
+                        <h2>Festivals à venir</h2>
                     </div>
                 </div>
             </div>
@@ -39,64 +36,60 @@
                 <div class="event__slider owl-carousel">
                     <div class="col-lg-4">
                         <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="{{ asset('assets/img/events/event-1.jpg') }}">
+                            <div class="event__item__pic set-bg" data-setbg="{{ asset('assets/img/festival/tomorrowland.jpg') }}">
                                 <div class="tag-date">
-                                    <span>Dec 15, 2019</span>
+                                    <span>Juin 15, 2024</span>
                                 </div>
                             </div>
                             <div class="event__item__text">
-                                <h4>David Guetta Miami Ultra</h4>
+                                <h4>Tomorrowland Belgium</h4>
                                 <p>
-                                    <i class="fa fa-map-marker"></i> Funkhaus Berlin, Berlin,
-                                    Germany
+                                    <i class="fa fa-map-marker"></i> Boom, Belgique
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="{{ asset('assets/img/events/event-1.jpg') }}">
+                            <div class="event__item__pic set-bg" data-setbg="{{ asset('assets/img/festival/ultra-europe-croatia.jpg') }}">
                                 <div class="tag-date">
-                                    <span>Dec 15, 2019</span>
+                                    <span>Juillet 20, 2024</span>
                                 </div>
                             </div>
                             <div class="event__item__text">
-                                <h4>David Guetta Miami Ultra</h4>
+                                <h4>Ultra Europe Croatia</h4>
                                 <p>
-                                    <i class="fa fa-map-marker"></i> Funkhaus Berlin, Berlin,
-                                    Germany
+                                    <i class="fa fa-map-marker"></i> Split, Croatie
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="{{ asset('assets/img/events/event-1.jpg') }}">
+                            <div class="event__item__pic set-bg" data-setbg="{{ asset('assets/img/festival/electric-zoo.jpg') }}">
                                 <div class="tag-date">
-                                    <span>Dec 15, 2019</span>
+                                    <span>Août 10, 2024</span>
                                 </div>
                             </div>
                             <div class="event__item__text">
-                                <h4>David Guetta Miami Ultra</h4>
+                                <h4>Electric Zoo New York</h4>
                                 <p>
-                                    <i class="fa fa-map-marker"></i> Funkhaus Berlin, Berlin,
-                                    Germany
+                                    <i class="fa fa-map-marker"></i> Randall's Island, NYC
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="event__item">
-                            <div class="event__item__pic set-bg" data-setbg="{{ asset('assets/img/events/event-1.jpg') }}">
+                            <div class="event__item__pic set-bg" data-setbg="{{ asset('assets/img/festival/edc-las-vegas.jpg') }}">
                                 <div class="tag-date">
-                                    <span>Dec 15, 2019</span>
+                                    <span>Septembre 5, 2024</span>
                                 </div>
                             </div>
                             <div class="event__item__text">
-                                <h4>David Guetta Miami Ultra</h4>
+                                <h4>EDC Las Vegas</h4>
                                 <p>
-                                    <i class="fa fa-map-marker"></i> Funkhaus Berlin, Berlin,
-                                    Germany
+                                    <i class="fa fa-map-marker"></i> Las Vegas, Nevada
                                 </p>
                             </div>
                         </div>
@@ -116,16 +109,16 @@
                 <div class="col-lg-6">
                     <div class="about__text">
                         <div class="section-title">
-                            <h2>DJ Alexandra Rud</h2>
-                            <h1>About me</h1>
+                            <h2>Groove Nomad</h2>
+                            <h1>À propos de nous</h1>
                         </div>
                         <p>
-                            DJ Rainflow knows how to move your mind, body and soul by
-                            delivering tracks that stand out from the norm. As if this
-                            impressive succession of high impact, floor-filling bombs wasn’t
-                            enough to sustain.
+                            Groove Nomad est la première agence digitale spécialisée dans la transformation 
+                            des festivals en aventures sur-mesure. Grâce à notre technologie IA avancée, 
+                            nous créons des expériences personnalisées qui s'adaptent aux préférences 
+                            de chaque membre du groupe.
                         </p>
-                        <a href="#" class="primary-btn">CONTACT ME</a>
+                        <a href="{{ route('request.index') }}" class="primary-btn">Créer mon expérience</a>
                     </div>
                 </div>
             </div>
@@ -144,40 +137,40 @@
                         <div class="col-lg-6 p-0 order-lg-1 col-md-6 order-md-1">
                             <div class="service__item deep-bg">
                                 <img src="{{ asset('assets/img/services/service-1.png') }}" alt="" />
-                                <h4>Wedding</h4>
+                                <h4>Festivals</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod.
+                                    Découvrez les meilleurs festivals de musique 
+                                    avec des expériences personnalisées.
                                 </p>
                             </div>
                         </div>
                         <div class="col-lg-6 p-0 order-lg-2 col-md-6 order-md-2">
                             <div class="service__item">
                                 <img src="{{ asset('assets/img/services/service-1.png') }}" alt="" />
-                                <h4>Clubs and bar</h4>
+                                <h4>Voyages de groupe</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod.
+                                    Organisez des voyages de groupe avec des itinéraires 
+                                    adaptés aux préférences de chacun.
                                 </p>
                             </div>
                         </div>
                         <div class="col-lg-6 p-0 order-lg-4 col-md-6 order-md-4">
                             <div class="service__item deep-bg">
                                 <img src="{{ asset('assets/img/services/service-1.png') }}" alt="" />
-                                <h4>DJ lessons</h4>
+                                <h4>Accompagnement IA</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod.
+                                    Notre IA analyse vos goûts pour créer des propositions 
+                                    d'expériences sur-mesure.
                                 </p>
                             </div>
                         </div>
                         <div class="col-lg-6 p-0 order-lg-3 col-md-6 order-md-3">
                             <div class="service__item">
                                 <img src="{{ asset('assets/img/services/service-1.png') }}" alt="" />
-                                <h4>Corporate events</h4>
+                                <h4>Logistique complète</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                    do eiusmod.
+                                    Gestion complète de la logistique : transport, hébergement, 
+                                    billets et activités.
                                 </p>
                             </div>
                         </div>
@@ -191,13 +184,13 @@
             <div class="row">
                 <div class="col-lg-7">
                     <div class="section-title">
-                        <h2>Latest tracks</h2>
-                        <h1>Music podcast</h1>
+                        <h2>Expériences récentes</h2>
+                        <h1>Témoignages clients</h1>
                     </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="track__all">
-                        <a href="#" class="primary-btn border-btn">View all tracks</a>
+                        <a href="{{ route('request.index') }}" class="primary-btn border-btn">Créer ma demande</a>
                     </div>
                 </div>
             </div>
@@ -205,7 +198,7 @@
                 <div class="col-lg-7 p-0">
                     <div class="track__content nice-scroll">
                         <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
+                            <h4>Expérience Tomorrowland 2023</h4>
                             <div class="jp-jplayer jplayer" data-ancestor=".jp_container_1"
                                 data-url="music-files/1.mp3"></div>
                             <div class="jp-audio jp_container_1" role="application" aria-label="media player">
@@ -245,7 +238,7 @@
                             </div>
                         </div>
                         <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
+                            <h4>Groupe Ultra Europe 2023</h4>
                             <div class="jp-jplayer jplayer" data-ancestor=".jp_container_2"
                                 data-url="music-files/2.mp3"></div>
                             <div class="jp-audio jp_container_2" role="application" aria-label="media player">
@@ -285,7 +278,7 @@
                             </div>
                         </div>
                         <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
+                            <h4>EDC Las Vegas 2023</h4>
                             <div class="jp-jplayer jplayer" data-ancestor=".jp_container_3"
                                 data-url="music-files/3.mp3"></div>
                             <div class="jp-audio jp_container_3" role="application" aria-label="media player">
@@ -325,7 +318,7 @@
                             </div>
                         </div>
                         <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
+                            <h4>Electric Zoo NYC 2023</h4>
                             <div class="jp-jplayer jplayer" data-ancestor=".jp_container_4"
                                 data-url="music-files/4.mp3"></div>
                             <div class="jp-audio jp_container_4" role="application" aria-label="media player">
@@ -365,7 +358,7 @@
                             </div>
                         </div>
                         <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
+                            <h4>Tomorrowland Winter 2023</h4>
                             <div class="jp-jplayer jplayer" data-ancestor=".jp_container_5"
                                 data-url="music-files/5.mp3"></div>
                             <div class="jp-audio jp_container_5" role="application" aria-label="media player">
@@ -405,7 +398,7 @@
                             </div>
                         </div>
                         <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
+                            <h4>Ultra Miami 2023</h4>
                             <div class="jp-jplayer jplayer" data-ancestor=".jp_container_6"
                                 data-url="music-files/6.mp3"></div>
                             <div class="jp-audio jp_container_6" role="application" aria-label="media player">
@@ -459,39 +452,39 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Youtube feed</h2>
-                        <h1>Latest videos</h1>
+                        <h2>Vidéos de festivals</h2>
+                        <h1>Dernières expériences</h1>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="youtube__item">
-                        <div class="youtube__item__pic set-bg" data-setbg="{{ asset('assets/img/youtube/youtube-1.jpg') }}">
+                        <div class="youtube__item__pic set-bg" data-setbg="{{ asset('assets/img/festival/tomorrowland.jpg') }}">
                             <a href="#" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                         </div>
                         <div class="youtube__item__text">
-                            <h4>David Guetta Miami Ultra Music Festival 2019</h4>
+                            <h4>Tomorrowland 2023 - Expérience Groove Nomad</h4>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="youtube__item">
-                        <div class="youtube__item__pic set-bg" data-setbg="{{ asset('assets/img/youtube/youtube-1.jpg') }}">
+                        <div class="youtube__item__pic set-bg" data-setbg="{{ asset('assets/img/festival/ultra-europe-croatia.jpg') }}">
                             <a href="#" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                         </div>
                         <div class="youtube__item__text">
-                            <h4>Martin Garrix (Full live-set) | SLAM!Koningsdag</h4>
+                            <h4>Ultra Europe 2023 - Voyage de groupe</h4>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="youtube__item">
-                        <div class="youtube__item__pic set-bg" data-setbg="{{ asset('assets/img/youtube/youtube-1.jpg') }}">
+                        <div class="youtube__item__pic set-bg" data-setbg="{{ asset('assets/img/festival/edc-las-vegas.jpg') }}">
                             <a href="#" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                         </div>
                         <div class="youtube__item__text">
-                            <h4>Dimitri Vegas, Steve Aoki & Like Mike’s “3 Are Legend”</h4>
+                            <h4>EDC Las Vegas 2023 - Expérience personnalisée</h4>
                         </div>
                     </div>
                 </div>
@@ -506,17 +499,17 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="countdown__text">
-                        <h1>Tomorrowland 2020</h1>
-                        <h4>Music festival start in</h4>
+                        <h1>Tomorrowland 2025</h1>
+                        <h4>Le festival commence dans</h4>
                     </div>
                     <div class="countdown__timer" id="countdown-time">
                         <div class="countdown__item">
                             <span>20</span>
-                            <p>days</p>
+                            <p>jours</p>
                         </div>
                         <div class="countdown__item">
                             <span>45</span>
-                            <p>hours</p>
+                            <p>heures</p>
                         </div>
                         <div class="countdown__item">
                             <span>18</span>
@@ -524,11 +517,11 @@
                         </div>
                         <div class="countdown__item">
                             <span>09</span>
-                            <p>seconds</p>
+                            <p>secondes</p>
                         </div>
                     </div>
                     <div class="buy__tickets">
-                        <a href="#" class="primary-btn">Buy tickets</a>
+                        <a href="{{ route('request.index') }}" class="primary-btn">Créer mon expérience</a>
                     </div>
                 </div>
             </div>

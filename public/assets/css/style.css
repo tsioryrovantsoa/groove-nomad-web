@@ -263,7 +263,6 @@ ol {
 -----------------------*/
 
 .header {
-    background: linear-gradient(to bottom, #1b014a 0%, #1b014aa2 50%, transparent 100%);
     position: absolute;
     left: 0;
     top: 0;
@@ -399,8 +398,8 @@ ol {
 -----------------------*/
 
 .hero {
-    padding-top: 295px;
-    padding-bottom: 295px;
+    padding-top: 195px;
+    padding-bottom: 160px;
     position: relative;
 }
 
@@ -470,12 +469,12 @@ ol {
 
 .linear__icon i {
     font-size: 50px;
-    color: #5c00ce;
+    color: white;
 }
 
 @-webkit-keyframes mymove {
     0% {
-        bottom: 0;
+        bottom: 10;
     }
     100% {
         bottom: -10px;
@@ -484,7 +483,7 @@ ol {
 
 @keyframes mymove {
     0% {
-        bottom: 0;
+        bottom: 10;
     }
     100% {
         bottom: -10px;
@@ -1586,7 +1585,7 @@ ol {
 }
 
 .service__item.deep-bg {
-    background: #5400bc;
+    background: #026A83;
 }
 
 .service__item h4 {

@@ -263,6 +263,7 @@ ol {
 -----------------------*/
 
 .header {
+    background: linear-gradient(to bottom, #1b014a 0%, #1b014aa2 50%, transparent 100%);
     position: absolute;
     left: 0;
     top: 0;

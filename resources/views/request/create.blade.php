@@ -7,9 +7,6 @@
         <div class="card shadow-sm mb-5">
             <div class="card-header bg-primary text-white">
                 <h4 class="mb-0">Étape 1/2 - Tes préférences</h4>
-                <div class="progress mt-2" style="height: 8px;">
-                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
             </div>
             <div class="card-body">
                 <form method="POST" action="{{ route('request.store.step1') }}">

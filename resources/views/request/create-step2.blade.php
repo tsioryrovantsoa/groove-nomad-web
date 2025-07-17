@@ -5,11 +5,8 @@
 @section('content')
     <div class="col-lg-8 offset-lg-2">
         <div class="card shadow-sm mb-5">
-            <div class="card-header bg-success text-white">
+            <div class="card-header bg-primary text-white">
                 <h4 class="mb-0">Étape 2/2 - Démarrer ton trip</h4>
-                <div class="progress mt-2" style="height: 8px;">
-                    <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
             </div>
             <div class="card-body">
                 <form method="POST" action="{{ route('request.store') }}">
@@ -58,7 +55,7 @@
 
                     <div class="d-flex justify-content-between mt-4">
                         <a href="{{ route('request.create') }}" class="btn btn-secondary">Retour à l'étape 1</a>
-                        <button type="submit" class="btn btn-success">Envoyer ma demande</button>
+                        <button type="submit" class="btn btn-primary">Envoyer ma demande</button>
                     </div>
                 </form>
             </div>

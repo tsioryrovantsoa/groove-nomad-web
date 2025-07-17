@@ -2,7 +2,7 @@
     <div class="col-lg-12">
         @if ($requests->count() > 0)
             <div class="text-center mb-4">
-                <a href="{{ route('chat.index') }}" class="btn btn-success btn-lg">
+                <a href="{{ route('chat.index') }}" class="btn btn-secondary">
                     <i class="fa fa-rocket mr-2"></i>Démarrer un nouvelle trip
                 </a>
             </div>
@@ -10,13 +10,13 @@
 
         @forelse ($requests as $request)
             <div class="card shadow-sm mb-4 border-0">
-                <div class="card-header bg-gradient-primary text-white">
+                <div class="card-header bg-primary text-white">
                     <div class="d-flex justify-content-between align-items-center">
                         <h5 class="mb-0">
                             <i class="fa fa-plane mr-2"></i>
                             Demande #{{ $request->id }}
                         </h5>
-                        <span class="badge badge-light badge-pill">
+                        <span class="badge badge-dark badge-pill">
                             {{ ucfirst($request->status) }}
                         </span>
                     </div>
@@ -39,13 +39,9 @@
                                     <i class="fa fa-calendar mr-1"></i>Dates
                                 </h6>
                                 <p class="mb-0">
-                                    <span class="badge badge-info mr-1">
-                                        {{ $request->date_start ? \Carbon\Carbon::parse($request->date_start)->format('d/m/Y') : '—' }}
-                                    </span>
+                                    {{ $request->date_start ? \Carbon\Carbon::parse($request->date_start)->format('d/m/Y') : '—' }}
                                     <i class="fa fa-arrow-right text-muted mx-1"></i>
-                                    <span class="badge badge-info">
-                                        {{ $request->date_end ? \Carbon\Carbon::parse($request->date_end)->format('d/m/Y') : '—' }}
-                                    </span>
+                                    {{ $request->date_end ? \Carbon\Carbon::parse($request->date_end)->format('d/m/Y') : '—' }}
                                 </p>
                             </div>
                         </div>
@@ -130,10 +126,9 @@
                                             </div>
 
                                             <div class="price-section text-center p-3 bg-light rounded">
-                                                <h5 class="text-success mb-0">
-                                                    <i class="fa fa-euro mr-1"></i>
+                                                <h4 class="text-success mb-0 text-lg">
                                                     {{ number_format($proposal->total_price, 2, ',', ' ') }} €
-                                                </h5>
+                                                </h4>
                                                 <small class="text-muted">Prix total TTC</small>
                                             </div>
 
@@ -143,30 +138,32 @@
                                                         method="POST" class="d-inline">
                                                         @csrf
                                                         @method('PUT')
-                                                        <button type="submit" class="btn btn-success btn-lg mr-2">
+                                                        <button type="submit" class="btn btn-success mr-2">
                                                             <i class="fa fa-check mr-1"></i>Accepter et payer
                                                         </button>
                                                     </form>
 
-                                                    <button type="button" class="btn btn-outline-danger btn-lg"
+                                                    <button type="button" class="btn btn-outline-danger"
                                                         onclick="document.getElementById('refusal-{{ $proposal->id }}').classList.toggle('d-none')">
                                                         <i class="fa fa-times mr-1"></i>Refuser
                                                     </button>
                                                     <div id="refusal-{{ $proposal->id }}" class="mt-3 d-none"
                                                         wire:ignore>
-                                                        <div class="form-group">
-                                                            <textarea wire:model.defer="rejectionReason" class="form-control" rows="3"
-                                                                placeholder="Expliquez pourquoi vous refusez cette proposition... Discutez avec l'IA pour trouver une solution."></textarea>
+                                                        <div class="form-group d-flex align-items-stretch">
+                                                            <div class="flex-grow-1 mr-2">
+                                                                <textarea wire:model.defer="rejectionReason" class="form-control" rows="3"
+                                                                    placeholder="Expliquez pourquoi vous refusez cette proposition... Discutez avec l'IA pour trouver une solution."></textarea>
+                                                            </div>
+                                                            <button wire:click="rejectProposal({{ $proposal->id }})"
+                                                                class="btn btn-primary d-flex align-items-center">
+                                                                Envoyer
+                                                            </button>
                                                         </div>
-                                                        <button wire:click="rejectProposal({{ $proposal->id }})"
-                                                            class="btn btn-primary">
-                                                            <i class="fa fa-paper-plane-o mr-1"></i>Envoyer
-                                                        </button>
                                                     </div>
                                                 @elseif ($proposal->status === 'accepted')
                                                     <div class="action-buttons mt-3 text-center">
                                                         <a href="{{ route('proposals.invoice', $proposal) }}"
-                                                            class="btn btn-primary btn-lg">
+                                                            class="btn btn-primary">
                                                             <i class="fa fa-download mr-1"></i>Télécharger la facture
                                                         </a>
                                                     </div>
@@ -179,7 +176,6 @@
                                 @if ($proposal->status === 'rejected' && $proposal->rejection_reason)
                                     <div class="alert alert-warning mt-2">
                                         <div class="d-flex align-items-start">
-                                            <i class="fa fa-comment text-warning mr-2 mt-1"></i>
                                             <div>
                                                 <p class="mb-0 mt-1">{{ $proposal->rejection_reason }}</p>
                                             </div>
@@ -204,12 +200,12 @@
                 </div>
             </div>
         @empty
-            <div class="text-center py-5">
+            <div class="py-5">
                 <div class="empty-state">
                     <i class="fa fa-plane fa-3x text-muted mb-3"></i>
-                    <h5 class="text-muted">Aucune demande de voyage</h5>
+                    <h4>Aucune demande de voyage</h4>
                     <p class="text-muted">Vous n'avez pas encore créé de demande de devis.</p>
-                    <a href="{{ route('request.create') }}" class="btn btn-primary btn-lg">
+                    <a href="{{ route('request.create') }}" class="btn btn-primary">
                         <i class="fa fa-plus mr-2"></i>Créer ma première demande
                     </a>
                 </div>
@@ -251,11 +247,6 @@
 
         .proposal-content li {
             margin-bottom: 0.5rem;
-        }
-
-        .price-section {
-            border: 2px solid #e9ecef;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
 
         .action-buttons {

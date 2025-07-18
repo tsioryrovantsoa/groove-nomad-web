@@ -160,7 +160,7 @@
                                                             </button>
                                                         </div>
                                                         <small class="text-muted mt-1 d-block">
-                                                            <i class="fa fa-shield mr-1"></i>N'envoyez pas vos informations personnelles
+                                                            N'envoyez pas vos informations personnelles
                                                         </small>
                                                     </div>
                                                 @elseif ($proposal->status === 'accepted')

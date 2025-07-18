@@ -125,11 +125,11 @@
                                                 {!! Str::markdown($proposal->response_text) !!}
                                             </div>
 
-                                            <div class="price-section text-center p-3 bg-light rounded">
-                                                <h4 class="text-success mb-0 text-lg">
+                                            <div class="price-section text-center p-3 {{ $proposal->status === 'accepted' ? 'bg-success text-white' : 'bg-light' }} rounded">
+                                                <h4 class="{{ $proposal->status === 'accepted' ? 'text-white' : 'text-success' }} mb-0 text-lg">
                                                     {{ number_format($proposal->total_price, 2, ',', ' ') }} €
                                                 </h4>
-                                                <small class="text-muted">Prix total TTC</small>
+                                                <small class="{{ $proposal->status === 'accepted' ? 'text-white' : 'text-muted' }}">Prix total TTC</small>
                                             </div>
 
                                             @if ($proposal->status === 'generated')
@@ -159,6 +159,9 @@
                                                                 Envoyer
                                                             </button>
                                                         </div>
+                                                        <small class="text-muted mt-1 d-block">
+                                                            <i class="fa fa-shield mr-1"></i>N'envoyez pas vos informations personnelles
+                                                        </small>
                                                     </div>
                                                 @elseif ($proposal->status === 'accepted')
                                                     <div class="action-buttons mt-3 text-center">
@@ -214,7 +217,7 @@
 
         {{-- Pagination --}}
         @if ($requests->hasPages())
-            <div class="d-flex justify-content-center mt-4">
+            <div class="d-flex justify-content-left mt-4 p-4">
                 {{ $requests->links() }}
             </div>
         @endif

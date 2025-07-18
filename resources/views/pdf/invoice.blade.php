@@ -6,7 +6,7 @@
     <title>Facture - Proposition #{{ $proposal->id }}</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Inter, sans-serif;
             font-size: 12px;
             line-height: 1.4;
             color: #333;
@@ -17,14 +17,14 @@
         .header {
             text-align: center;
             margin-bottom: 30px;
-            border-bottom: 2px solid #007bff;
+            border-bottom: 2px solid #5c00ce;
             padding-bottom: 20px;
         }
 
         .logo {
             font-size: 24px;
             font-weight: bold;
-            color: #007bff;
+            color: #5c00ce;
             margin-bottom: 10px;
         }
 
@@ -42,7 +42,7 @@
         .section-title {
             font-size: 16px;
             font-weight: bold;
-            color: #007bff;
+            color: #5c00ce;
             margin-bottom: 10px;
             border-bottom: 1px solid #ddd;
             padding-bottom: 5px;
@@ -114,7 +114,7 @@
         }
 
         .ai-response h3 {
-            color: #007bff;
+            color: #5c00ce;
             margin-bottom: 15px;
         }
 
@@ -182,7 +182,7 @@
         </div>
     </div>
 
-    <div class="festival-info">
+    {{-- <div class="festival-info">
         <div class="section-title">Festival sélectionné</div>
         <div class="info-row">
             <span class="label">Nom :</span>
@@ -197,7 +197,7 @@
             <span class="label">Lieu :</span>
             <span class="value">{{ $festival->location }}, {{ $festival->region }}</span>
         </div>
-    </div>
+    </div> --}}
 
     <div class="section-title">Détails de la demande</div>
     <div class="info-row">

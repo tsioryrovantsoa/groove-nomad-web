@@ -269,7 +269,7 @@ IMPORTANT : Le prix total doit etre inferieur ou egal a {$request->budget} EUR. 
 
             // OPTIMISATION : Réduire la température pour des réponses plus rapides
             $response = $this->client->chat()->create([
-                'model' => 'gpt-4o-mini',
+                'model' => config('app.env') === 'production' ? 'gpt-3.5-turbo' : 'gpt-4',
                 'messages' => $messages,
                 'temperature' => 0.5,
                 'max_tokens' => 2000,

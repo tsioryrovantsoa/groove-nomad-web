@@ -107,10 +107,10 @@
                             @foreach ($request->proposals as $proposal)
                                 <div class="proposal-card mb-3">
                                     <div class="card border-0 shadow-sm">
-                                        <div class="card-header bg-light">
+                                        <div class="card-header {{ $proposal->status === 'accepted' ? 'bg-success text-white' : 'bg-light' }}">
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="d-flex align-items-center">
-                                                    <i class="fa fa-cog text-primary mr-2"></i>
+                                                    <i class="fa fa-cog {{ $proposal->status === 'accepted' ? 'text-white' : 'text-primary' }} mr-2"></i>
                                                     <strong>Proposition #{{ $proposal->id }}</strong>
                                                 </div>
                                                 <span
@@ -222,10 +222,6 @@
 
     <style>
         /* Styles généraux */
-        .bg-gradient-primary {
-            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
-        }
-
         .info-section {
             padding: 0.75rem;
             border-radius: 0.5rem;

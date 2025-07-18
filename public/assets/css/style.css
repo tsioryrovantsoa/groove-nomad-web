@@ -65,15 +65,18 @@ h3 {
 h4 {
     font-weight: 600;
     font-size: 24px;
+    font-family: "Inter", sans-serif !important;
 }
 
 h5 {
     font-weight: 600;
     font-size: 18px;
+    font-family: "Inter", sans-serif !important;
 }
 
 h6 {
     font-size: 16px;
+    font-family: "Inter", sans-serif !important;
 }
 
 p {
@@ -100,7 +103,7 @@ a:hover,
 a:focus {
     text-decoration: none;
     outline: none;
-    color: #026A83;
+    color: #026a83;
 }
 
 ul,
@@ -1591,7 +1594,7 @@ ol {
 }
 
 .service__item.deep-bg {
-    background: #026A83;
+    background: #026a83;
 }
 
 .service__item h4 {
@@ -2960,13 +2963,12 @@ ol {
     }
 }
 
-
 /* CUSTOM - Charte graphique Groove Nomad */
 
 /* Variables CSS pour la charte graphique */
 :root {
     --primary-color: #290849;
-    --secondary-color: #026A83;
+    --secondary-color: #026a83;
     --primary-light: #3a0a5f;
     --secondary-light: #0384a8;
 }
@@ -3027,7 +3029,7 @@ ol {
     .tags-container {
         gap: 4px;
     }
-    
+
     .tag {
         padding: 4px 10px;
         font-size: 0.8rem;
@@ -3040,24 +3042,24 @@ ol {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+
     .preferences-title h3 {
         font-size: 1.8rem;
     }
-    
+
     .preferences-content {
         padding: 20px;
     }
-    
+
     .preference-section {
         padding: 20px;
     }
-    
+
     .section-header {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .section-icon {
         margin-right: 0;
         margin-bottom: 10px;
@@ -3085,11 +3087,18 @@ ol {
     animation-delay: calc(var(--animation-order) * 0.1s);
 }
 
-.preference-section:nth-child(1) { --animation-order: 1; }
-.preference-section:nth-child(2) { --animation-order: 2; }
-.preference-section:nth-child(3) { --animation-order: 3; }
-.preference-section:nth-child(4) { --animation-order: 4; }
-
+.preference-section:nth-child(1) {
+    --animation-order: 1;
+}
+.preference-section:nth-child(2) {
+    --animation-order: 2;
+}
+.preference-section:nth-child(3) {
+    --animation-order: 3;
+}
+.preference-section:nth-child(4) {
+    --animation-order: 4;
+}
 
 .btn-primary {
     background-color: #290849;
@@ -3118,30 +3127,29 @@ ol {
     box-shadow: 0 0 0 0.2rem rgba(41, 8, 73, 0.25) !important;
 }
 
-
 .btn-secondary {
-    background-color: #026A83;
-    border-color: #026A83;
+    background-color: #026a83;
+    border-color: #026a83;
 }
 
 .btn-secondary:hover {
-    background-color: #026A83;
-    border-color: #026A83;
+    background-color: #026a83;
+    border-color: #026a83;
 }
 
 .btn-secondary:active {
-    background-color: #026A83 !important;
-    border-color: #026A83 !important;
+    background-color: #026a83 !important;
+    border-color: #026a83 !important;
 }
 
 .btn-secondary:focus {
-    background-color: #026A83 !important;
-    border-color: #026A83 !important;
+    background-color: #026a83 !important;
+    border-color: #026a83 !important;
     box-shadow: 0 0 0 0.2rem rgba#026A83 !important;
 }
 
 .btn-secondary:active:focus {
-    background-color: #026A83 !important;
-    border-color: #026A83 !important;
-    box-shadow: 0 0 0 0.2rem #026A83 !important;
+    background-color: #026a83 !important;
+    border-color: #026a83 !important;
+    box-shadow: 0 0 0 0.2rem #026a83 !important;
 }

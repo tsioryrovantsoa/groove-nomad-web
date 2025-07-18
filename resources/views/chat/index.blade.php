@@ -16,24 +16,24 @@
 
                 <div class="interactive-form">
                     <p class="form-text">
-                        Bonjour ! Je souhaite partir avec un budget de 
+                        Bonjour ! Je souhaite partir avec un budget de
                         <input type="number" name="budget" class="form-control inline-input" placeholder="1000€" min="0" required> €
-                        du 
+                        du
                         <input type="date" name="date_start" class="form-control inline-input" required>
-                        au 
+                        au
                         <input type="date" name="date_end" class="form-control inline-input" required>
                         .
                     </p>
 
                     <p class="form-text">
-                        Je veux aller en 
+                        Je veux aller en
                         <select name="region" class="form-control inline-input" required>
                             <option value="">-- Choisir --</option>
                             @foreach ($regions as $region)
                                 <option value="{{ $region->region }}">{{ $region->region }}</option>
                             @endforeach
                         </select>
-                        pour 
+                        pour
                         <input type="number" name="nombre_personnes" class="form-control inline-input" placeholder="2" min="1" max="20" required>
                         personne(s).
                     </p>

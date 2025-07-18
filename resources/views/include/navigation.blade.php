@@ -44,6 +44,12 @@
                             </ul>
                         </nav>
                         <div class="header__right__social">
+                            <div class="language-dropdown" style="display: inline-block; margin-right: 15px;">
+                                <select class="form-control" style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; padding: 5px 10px; border-radius: 4px;">
+                                    <option value="fr" selected style="background: #333; color: white;">Français</option>
+                                    <option value="en" style="background: #333; color: white;">English</option>
+                                </select>
+                            </div>
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
                             <a href="#"><i class="fa fa-instagram"></i></a>
